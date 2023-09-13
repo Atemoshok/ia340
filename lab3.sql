@@ -14,3 +14,41 @@ values
 	('p2@jmu.edu','p2','o2');
 
 select * from professor
+--Q2.3
+insert into course(c_number,c_name,room,p_email)
+values 
+	('c1,','postgresql','r1','p1@jmu.edu'),
+	('c2','mongodb','r2','p2@jmu.edu'),
+	('c3,','twitter','r1','p1@jmu.edu');
+	
+	select * from course
+
+--Q2.4
+insert into enroll(c_number,s_email)
+values 
+	('c1','s1@jmu.edu'),
+	('c1','s2@jmu.edu'),
+	('c1','s3@jmu.edu'),
+	('c2','s4@jmu.edu'),
+	('c3','s2@jmu.edu'),
+	('c3','s3@jmu.edu');
+	
+	
+select * from enroll
+
+--Q2.5 
+insert into professor(p_email,p_name,office)
+values ('p3@jmu.edu','p3','o3');
+
+insert into course(c_number,c_name,room,p_email)
+values('c4,','facebook','r1','p3@jmu.edu')
+--You have to update new data before entering new ones so professor first
+
+--Q2.6
+update course 
+set p_email= 'p3@jmu.edu'
+where p_email = 'p1@jmu.edu'
+
+delete from professor
+where p_email= 'p1@jmu.edu'
+--You have to update new data before entering new ones so course first
